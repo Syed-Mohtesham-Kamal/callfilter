@@ -16,13 +16,16 @@ const CallLogFilter = ({ callLogs }) => {
     });
   };
 
-  const filteredLogs = callLogs.filter((log) => {
+  const filteredLogs = Array.isArray(callLogs) ? callLogs.filter((log) => {
     return (
       (filters.callType === '' || log.callType === filters.callType) &&
       (filters.callerName === '' || log.callerName.toLowerCase().includes(filters.callerName.toLowerCase())) &&
       (filters.receiverName === '' || log.receiverName.toLowerCase().includes(filters.receiverName.toLowerCase()))
     );
-  });
+  }) : [];
+
+  console.log('callLogs:', callLogs);
+  console.log('filteredLogs:', filteredLogs);
 
   return (
     <div className="filter-container">
