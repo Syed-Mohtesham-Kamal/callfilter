@@ -1,0 +1,24 @@
+.filter-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .filter-container label,
+  .filter-container input,
+  .filter-container select {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .filter-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .filter-container li {
+    margin-bottom: 5px;
+  }
+  

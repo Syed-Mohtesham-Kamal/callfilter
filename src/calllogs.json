@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "callerName": "John Doe",
+      "callerPhoneNumber": "123-456-7890",
+      "receiverName": "Jane Smith",
+      "receiverPhoneNumber": "987-654-3210",
+      "duration": 10,
+      "callType": "incoming",
+      "timestamp": "2023-09-08T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "callerName": "Alice Johnson",
+      "callerPhoneNumber": "555-123-4567",
+      "receiverName": "Bob Brown",
+      "receiverPhoneNumber": "555-987-6543",
+      "duration": 15,
+      "callType": "outgoing",
+      "timestamp": "2023-09-08T11:45:00Z"
+    },
+    {
+      "id": 3,
+      "callerName": "Eve Anderson",
+      "callerPhoneNumber": "777-555-4444",
+      "receiverName": "Charlie Davis",
+      "receiverPhoneNumber": "777-555-9999",
+      "duration": 8,
+      "callType": "incoming",
+      "timestamp": "2023-09-09T09:15:00Z"
+    },
+    {
+      "id": 4,
+      "callerName": "Grace Lee",
+      "callerPhoneNumber": "111-222-3333",
+      "receiverName": "David Johnson",
+      "receiverPhoneNumber": "444-555-6666",
+      "duration": 20,
+      "callType": "outgoing",
+      "timestamp": "2023-09-10T14:20:00Z"
+    },
+    {
+      "id": 5,
+      "callerName": "Samuel Green",
+      "callerPhoneNumber": "999-888-7777",
+      "receiverName": "Olivia Parker",
+      "receiverPhoneNumber": "333-222-1111",
+      "duration": 12,
+      "callType": "incoming",
+      "timestamp": "2023-09-11T16:35:00Z"
+    },
+    {
+      "id": 6,
+      "callerName": "Sophia Williams",
+      "callerPhoneNumber": "666-777-8888",
+      "receiverName": "Michael Davis",
+      "receiverPhoneNumber": "222-333-4444",
+      "duration": 18,
+      "callType": "outgoing",
+      "timestamp": "2023-09-12T12:50:00Z"
+    }
+  ]
