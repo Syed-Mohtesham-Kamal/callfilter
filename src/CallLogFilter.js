@@ -16,16 +16,19 @@ const CallLogFilter = ({ callLogs }) => {
     });
   };
 
-  const filteredLogs = Array.isArray(callLogs) ? callLogs.filter((log) => {
-    return (
-      (filters.callType === '' || log.callType === filters.callType) &&
-      (filters.callerName === '' || log.callerName.toLowerCase().includes(filters.callerName.toLowerCase())) &&
-      (filters.receiverName === '' || log.receiverName.toLowerCase().includes(filters.receiverName.toLowerCase()))
-    );
-  }) : [];
+  const applyFilters = () => {
+    const filteredLogs = callLogs.filter((log) => {
+      return (
+        (filters.callType === '' || log.callType === filters.callType) &&
+        (filters.callerName === '' || log.callerName.toLowerCase().includes(filters.callerName.toLowerCase())) &&
+        (filters.receiverName === '' || log.receiverName.toLowerCase().includes(filters.receiverName.toLowerCase()))
+      );
+    });
 
-  console.log('callLogs:', callLogs);
-  console.log('filteredLogs:', filteredLogs);
+    return filteredLogs;
+  };
+
+  const filteredLogs = applyFilters();
 
   return (
     <div className="filter-container">
@@ -56,10 +59,13 @@ const CallLogFilter = ({ callLogs }) => {
         />
       </div>
 
+      {/* Add a button to apply the filters */}
+      <button onClick={applyFilters}>Filter Logs</button>
+
+      {/* Display the filtered logs */}
       <ul>
         {filteredLogs.map((log) => (
           <li key={log.id}>
-            {/* Render your call log information here */}
             {log.callerName} called {log.receiverName} - {log.callType}
           </li>
         ))}
